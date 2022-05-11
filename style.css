@@ -1,10 +1,80 @@
-/* header */
+/*=========================== NAV MENU ============================
+=================================================================*/
+
+#background-slider {
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    left: 0px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#button-middle-zone{
+    position: relative;
+}
+
+#button-middle-zone a {
+    position: relative;
+
+    color:rgb(255, 255, 255);
+    
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.button-slider-selected {  
+    font-weight: 500;
+}
+
+.button-slider {
+    font-weight: 100;
+}
+
+.button-slider:hover {
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* DESKTOP */
+
+@media only screen and (min-width: 600px) {
+    #background-slider {
+        top: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    #button-middle-zone{
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        text-align:center;
+    }
+
+    #button-middle-zone a {
+        display: inline-block;
+        width: 150px;
+        top: 25%;
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    
+}
+
+/* PHONE */
+
+@media only screen and (max-width: 600px) {
 
 #background-slider {
     transition: all 0.5s ease-in-out;
     position: fixed;
 
-    top: calc(-100% + 50px);
+    top: calc(-100% + 60px);
     left: 0px;
     width: 100%;
     height: 100%;
@@ -41,19 +111,6 @@
     text-decoration: none;
 }
 
-.button-slider-selected {  
-    font-weight: 500;
-}
-
-.button-slider {
-    font-weight: 100;
-}
-
-.button-slider:hover {
-    font-weight: 300;
-    cursor: pointer;
-}
-
 #button-middle-zone a:hover:before {
     content: "- ";
   }
@@ -71,3 +128,8 @@
     border-width: 0px;
     background-color: rgba(0, 0, 0, 0.1);
 }
+
+}
+
+/*=========================== NAV MENU ============================
+=================================================================*/
