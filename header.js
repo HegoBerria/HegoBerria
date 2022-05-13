@@ -2,7 +2,7 @@ window.addEventListener('resize', resetSlider);
 
 function changeSliderDisplay() {
     slider = document.getElementById("background-slider");
-    if (window.matchMedia("(max-width: 600px)").matches) {
+    if (window.matchMedia("(orientation: portrait)").matches) {
 
         if (slider.style.top == "0px") {
             slider.style.top = "calc(-100% + 60px)";
@@ -15,7 +15,7 @@ function changeSliderDisplay() {
 }
 
 function resetSlider() {
-    if (window.matchMedia("(min-width: 600px)").matches) {
+    if (window.matchMedia("(orientation: landscape)").matches) {
         slider.style.top = "0px";
     }
 }

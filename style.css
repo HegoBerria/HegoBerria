@@ -38,7 +38,7 @@
 
 /* DESKTOP */
 
-@media only screen and (min-device-width: 600px) {
+@media (orientation: landscape) { 
     #background-slider {
         top: 0px;
         width: 100%;
@@ -68,7 +68,7 @@
 
 /* PHONE */
 
-@media all and (max-device-width: 600px) {
+@media (orientation: portrait) {
 
 #background-slider {
     transition: all 0.5s ease-in-out;
