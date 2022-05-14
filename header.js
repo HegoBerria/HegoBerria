@@ -5,7 +5,7 @@ function changeSliderDisplay() {
     if (window.matchMedia("(orientation: portrait)").matches) {
 
         if (slider.style.top == "0px") {
-            slider.style.top = "calc(-100% + 60px)";
+            slider.style.top = "-80%";
         } else {
             slider.style.top = "0px";
         }

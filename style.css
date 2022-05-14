@@ -74,49 +74,41 @@
     transition: all 0.5s ease-in-out;
     position: fixed;
 
-    top: calc(-100% + 60px);
+    top: -80%;
     left: 0px;
     width: 100%;
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.8);
-
+    align-items: center;
+    vertical-align: middle;
     
 }
 
 
 #button-middle-zone{
-    position: relative;
-
-    top: 25%;
-    left: calc(50% - 160px);
-    width: 300px;
+    display:block;
+    width: 100%;
     height: fit-content;
     padding: 10px;
 
+    top: 0px;
+
     text-align:center;
-    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #button-middle-zone a {
     position: relative;
     display: block;
     width:auto;
-    height: 40px;
+    height: max-content;
 
     color:rgb(255, 255, 255);
 
     font-family: 'Roboto', sans-serif, monospace;
-    font-size: 34px;
+    font-size: 80px;
     text-decoration: none;
-}
-
-#button-middle-zone a:hover:before {
-    content: "- ";
-  }
-
-#button-middle-zone a:hover:after {
-    content: " -";
 }
 
 #button-slider-activation {
