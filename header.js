@@ -12,7 +12,7 @@ function verticalMenuClick() {
     }
 }
 
-generateGr();
+/*generateGr();*/
 
 function generateGr() {
 
