@@ -1,126 +1,254 @@
 /*=========================== NAV MENU ============================
 =================================================================*/
 
-#background-slider {
-    transition: all 0.5s ease-in-out;
-    position: fixed;
-    left: 0px;
+@media (max-width: 950px) {
+    #vertical-menu {
 
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#button-middle-zone{
-    position: relative;
-}
-
-#button-middle-zone a {
-    position: relative;
-
-    color:rgb(255, 255, 255);
-    
-    font-family: 'Roboto', sans-serif, monospace;
-    font-size: 20px;
-    text-decoration: none;
-}
-
-.button-slider-selected {  
-    font-weight: 500;
-}
-
-.button-slider {
-    font-weight: 100;
-}
-
-.button-slider:hover {
-    font-weight: 300;
-    cursor: pointer;
-}
-
-/* DESKTOP */
-
-@media (orientation: landscape) { 
-    #background-slider {
+        background-color: rgba(0, 0, 0, 0.95);
+        color: white;
         top: 0px;
+        right: 0px;
         width: 100%;
-        height: auto;
+        height: 50px;
+        position: fixed;
+        user-select: none;
+        cursor:pointer;
     }
 
-    #button-middle-zone{
+    #logo-image-ver {
+        height: 30px;
+        width: 30px;
+
+        top: 5px;
+        left: 30px;
+        position:absolute;
+    }
+
+    .icon {
+        font-size: 40px;
+        float: right;
+        padding-top: 2px;
+        padding-right: 8px;
+    }
+
+    #vertical-menu-bar {
+        position: absolute;
+        display: fixed;
+        right: 0px;
+        top: 50px;
+        width: 190px;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    .button-slider {
+        float: right;
+        position: relative;
+
+        font-weight: 100;
+        font-family: 'Roboto', sans-serif, monospace;
+        font-size: 20px;
+        text-decoration: none;
+
+        width: 150px;
+        padding: 20px;
+
+        text-align: center;
+
+        color: white;
+    }
+
+    .button-slider:hover {
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    .button-slider-selected {
+        float: right;
+        position: relative;
+
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif, monospace;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 20px;
+        width: 150px;
+
+        text-align: center;
+
+        color: white;
+    }
+}
+
+/*@media (orientation: portrait) {
+    #vertical-menu {
+        background-color: rgba(0, 0, 0, 0.95);
+        color: white;
+        top: 0px;
+        right: 0px;
+        width: 100%;
+        height: 110px;
+        position: absolute;
+        border-bottom-left-radius: 5px;
+        user-select: none;
+    }
+
+    #logo-image-ver {
+        height: 30px;
+        width: 30px;
+
+        top: 5px;
+        left: 30px;
+        position:absolute;
+    }
+
+    .icon {
+        font-size: 100px;
+        width: 100%;
+
+        padding-top: 2px;
+        padding-right: 8px;
+        cursor:pointer;
+    }
+
+    #icon-menu {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #vertical-menu-bar {
+        position: absolute;
+        display: fixed;
+        right: 0px;
+        top: 110px;
+        background-color: black;
+    }
+}*/
+
+@media (min-width: 950px) {
+    #horizontal-menu {
+        background-color: rgba(0, 0, 0, 0.95);
+        color: white;
         top: 0px;
         left: 0px;
         width: 100%;
-        height: 100%;
-        padding: 0px;
-        text-align:center;
+        height: 100px;
+        position: fixed;
     }
 
-    #button-middle-zone a {
-        display: inline-block;
+    #logo-image-hor {
+        
+        height: 90px;
+        width: 90px;
+
+        top: 5px;
+        left: 50%;
+        position:absolute;
+        transform: translateX( -50% );
+    }
+
+    #logo-left-part {
+        position: absolute;
+        left: 0px;
+        width: calc( 50% - 45px);
+    }
+
+    #logo-right-part {
+        position: absolute;
+        left: calc(50% + 45px);
+    }
+
+    .button-slider {
+        float: right;
+        position: relative;
+
+        font-weight: 100;
+        font-family: 'Roboto', sans-serif, monospace;
+        font-size: 20px;
+        text-decoration: none;
+
+        height: 100px;
         width: 150px;
-        top: 25%;
-        height: 100%;
-        padding-top: 20px;
-        padding-bottom: 20px;
+
+        text-align: center;
+        vertical-align: middle;
+        line-height:100px;
+
+        color: white;
     }
 
+    .button-slider:hover {
+        font-weight: 300;
+        cursor: pointer;
+    }
+
+    .button-slider-selected {
+        float: right;
+        position: relative;
+
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif, monospace;
+        font-size: 20px;
+        text-decoration: none;
+
+        height: 100px;
+        width: 150px;
+
+        text-align: center;
+        vertical-align: middle;
+        line-height:100px;
+
+        color: white;
+    }
+}
+
+@media (min-width: 1050px) {
+    #vertical-menu {
+        display: none;
+    }
+
+    #horizontal-menu {
+        display:initial;
+    }
+}
+
+@media (min-width: 950px) and (max-width: 1050px) {
+    #logo-image-ver, #logo-image-hor, #vertical-menu {
+        display: none;
+    }
+
+    #horizontal-menu {
+        display:initial;
+    }
+
+    #logo-left-part {
+        position: absolute;
+        left: 0px;
+        width: calc( 50%);
+    }
     
+    #logo-right-part {
+        position: absolute;
+        left: calc(50%);
+    }
 }
 
-/* PHONE */
+@media (max-width: 950px) {
+    #horizontal-menu {
+        display: none;
+    }
 
-@media (orientation: portrait) {
-
-#background-slider {
-    transition: all 0.5s ease-in-out;
-    position: fixed;
-
-    top: -80%;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.8);
-    align-items: center;
-    vertical-align: middle;
+    #vertical-menu {
+        display: initial;
+    }
 }
 
+/*@media (orientation: portrait) {
+    #horizontal-menu {
+        display: none;
+    }
 
-#button-middle-zone {
-    display:block;
-    width: 100%;
-    height: fit-content;
-    padding: 10px;
-
-    top: 0px;
-
-    text-align:center;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-#button-middle-zone a {
-    position: relative;
-    display: block;
-    width:auto;
-    height: max-content;
-
-    color:rgb(255, 255, 255);
-
-    font-family: 'Roboto', sans-serif, monospace;
-    font-size: 80px;
-    text-decoration: none;
-}
-
-#button-slider-activation {
-    position: relative;
-
-    top: 0px;
-    height: 50px;
-    width: 100%;
-    border-width: 0px;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-}
-
-/*=========================== NAV MENU ============================
-=================================================================*/
+    #vertical-menu {
+        display: initial;
+    }
+}*/

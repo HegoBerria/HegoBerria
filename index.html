@@ -12,14 +12,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,900;1,400&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
+    <header style="z-index: 5;">
         <script src="header.js"></script>
 
-        <div id="background-slider" onclick="changeSliderDisplay()">
-            <div id="button-middle-zone">
+        <div id="horizontal-menu">
+            <div id="logo-left-part">
+                <a href="#" id="button-slider-programme" class="button-slider">Programme</a>
+                <a href="#" id="button-slider-annonces" class="button-slider">Annonces</a>
+                <a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-weight" id="button-slider-accueil"
+                    class="button-slider-selected">Accueil</a>
+            </div>
+            <img id="logo-image-hor" src="logo/b&wINV.png">
+            <div id="logo-right-part">
+                <a href="#" id="button-slider-autre" class="button-slider">Autre</a>
+                <a href="#" id="button-slider-contacter" class="button-slider">Nous contacter</a>
+                <a href="#" id="button-slider-iut" class="button-slider">L'IUT</a>
+            </div>
+        </div>
+
+        <div id="vertical-menu">
+
+
+            <a class="icon" onclick="verticalMenuClick()">
+                <i id="icon-menu" class="fa fa-bars"></i>
+            </a>
+            <div id="vertical-menu-bar">
                 <a href="https://developer.mozilla.org/fr/docs/Web/CSS/font-weight" id="button-slider-accueil"
                     class="button-slider-selected">Accueil</a>
                 <a href="#" id="button-slider-annonces" class="button-slider">Annonces</a>
@@ -29,43 +51,37 @@
                 <a href="#" id="button-slider-autre" class="button-slider">Autre</a>
             </div>
         </div>
+
     </header>
 
-    <div id="decoration-gauche">
-        <div
-            style="background-color: #BB5A46; 
-            position: absolute;
-            top: -80px; left:-20px; 
-            width: 289px; height: 281px;
-            transform: rotate(100deg);
-            z-index: -1;">
+    <div id="sup-part" style="background-color: #BB5A46; 
+position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;
+        z-index: -1;" >
+
+        <div id="div-cen-sup" onmousemove="coordinatesFunc(event)"
+            style="z-index: 5; position: absolute; top: 50%; max-width: 300px;  left: 50%; transform: translateX(-50%) translateY(-50%); text-align: center; font-family: 'Roboto', sans-serif, monospace;">
+            <h1 style="color: white;">Hego Berria</h1>
+            <h3 style="color: rgb(207, 207, 207); font-weight: 300;">Site du BDE du BUT d'informatique au campus Montaury d'anglet</h3><img src="./logo/color.png" style="width: 120px; height: auto;">
         </div>
-        <div
-            style="background-color: #9C4432;
-            position: absolute; 
-            top: 0px; left:-130px; 
-            width: 370px; height: 535px;
-            transform: rotate(45deg);
-            z-index: -2;">
-        </div>
-        <div
-            style="background-color: rgb(185, 70, 66); 
-            position: absolute;
-            top: -140px; left:200px; 
-            width: 250px; height: 400px;
-            transform: rotate(76deg);
-            z-index: -3;">
-        </div>
-        <div
-            style="background-color: #9C4432; 
-            position: absolute;
-            top: 350px; left:-100px; 
-            width: 399px; height: 350px;
-            transform: rotate(160deg);
-            z-index: -1;">
+
+        <div id="animationDivHan" onmousemove="coordinatesFunc(event)"  style="width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; z-index: 2;">
+
         </div>
 
     </div>
+
+    <div id="middle-part" style="background-color: #f3f3f3; 
+position: relative; width: 100%; height: 100%;
+        z-index: -1;">jxfthxtfth
+    </div>
+
+    <footer id="footer" style="background-color: #000000; 
+        position: absolute;
+
+        top: 200%; left: 0px; 
+        width: 100%; height: 160px;
+        z-index: -1;">
+    </footer>
 
 
 </body>
