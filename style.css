@@ -233,7 +233,17 @@
     }
 }
 
-@media (max-width: 950px) {
+@media (orientation: portrait){
+    #horizontal-menu {
+        display: none;
+    }
+
+    #vertical-menu {
+        display: initial;
+    }
+}
+
+ @media (max-width: 950px) {
     #horizontal-menu {
         display: none;
     }
