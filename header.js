@@ -15,8 +15,9 @@ function verticalMenuClick() {
 generateGr();
 
 function generateGr() {
-    var fs = require('fs');
-    var files = fs.readdirSync('./data/annonces');
-
-    console.log(files);
+    fetch('./data/annonces.json')
+    .then(response => response.text())
+    .then((data) => {
+      console.log(data)
+    })
 }
