@@ -4,10 +4,12 @@
 
 #horizontal-menu {
     display: none;
+    z-index: 5;
 }
 
 #vertical-menu {
     display: initial;
+    z-index: 5;
 }
 
 #vertical-menu {
@@ -21,6 +23,7 @@
     position: fixed;
     user-select: none;
     cursor:pointer;
+    z-index: 5;
 }
 
 #logo-image-ver {
@@ -85,17 +88,28 @@
 
     color: white;
 }
+/* ===================== */
+
+#page-content {
+    background-color: #ec2700; 
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+}
 
 /* === PARTIE SUPERIEUR === */
 
 #sup-part {
     background-color: #BB5A46; 
-    position: absolute; 
-    top: 0px; 
-    left: 0px; 
+    display:flex;
     width: 100%; 
     height: 100%;
-    z-index: -1;
 }
 
 #div-cen-sup {
@@ -126,13 +140,113 @@ h3 {
 
 /* === PARTIE BASSE === */
 
+#middle-part {
+    display:flex;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(255, 185, 224);
+}
+
 /* === FOOTER === */
 
 footer {
     background-color: #000000; 
-    position: absolute;
-
-    top: 200%; left: 0px; 
+    display:flex;
+    position:inherit;
     width: 100%; height: 160px;
-    z-index: -1;
+    z-index: 3;
+}
+
+#icon-instagram {
+    transition: all 0.3s;
+
+    font-size: 35px;
+    width: 35px;
+    padding: 10px;
+    cursor:pointer;
+    border-radius: 15px;
+
+    background-color: black;
+
+    filter: invert(0%);
+}
+
+#icon-instagram:hover {
+    filter: invert(100%);
+}
+
+#icon-gmail {
+    transition: all 0.3s;
+
+    font-size: 35px;
+    width: 35px;
+    padding: 10px;
+    cursor:pointer;
+    border-radius: 15px;
+
+    background-color: black;
+
+    filter: invert(0%);
+}
+
+#icon-gmail:hover {
+    filter: invert(100%);
+}
+
+#ext-link {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 50px;
+}
+
+#int-link-l {
+    height: 80%;
+    width: 150px;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+
+    border-left-style:solid;
+    border-color: rgba(255, 255, 255, 0.918);
+    border-width: 1px;
+
+    color: white;
+}
+
+#int-link-r {
+    height: 80%;
+    width: 150px;
+    position: absolute;
+    top: 10%;
+    left: 300px;
+
+    border-left-style:solid;
+    border-color: rgba(255, 255, 255, 0.918);
+    border-width: 1px;
+
+    color: white;
+}
+
+.footer-link {
+    list-style:none;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+
+    font-weight: 100;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+.footer-link:hover {
+    font-weight: 300;
+}
+
+.footer-link-text {
+    color: white;
+    text-decoration: none;
+
 }
