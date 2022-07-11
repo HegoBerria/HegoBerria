@@ -88,80 +88,27 @@
 
     color: white;
 }
-/* ===================== */
-
-#page-content {
-    background-color: #ec2700; 
-    position:absolute;
-    top: 0px;
-    left: 0px;
-    
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    z-index: 0;
-}
-
-/* === PARTIE SUPERIEUR === */
-
-#sup-part {
-    background-color: #BB5A46; 
-    display:flex;
-    width: 100%; 
-    height: 100%;
-}
-
-#div-cen-sup {
-    z-index: 5; 
-    position: absolute; 
-    top: 50%; 
-    max-width: 300px;  
-    left: 50%; 
-    transform: translateX(-50%) translateY(-50%); 
-    text-align: center; 
-    font-family: 'Roboto', sans-serif, monospace;
-}
-
-h1 {
-    color: white;
-}
-
-h3 {
-    color: rgb(207, 207, 207); 
-    font-weight: 300;
-    
-}
-
-#image-principale {
-    width: 120px; 
-    height: auto;
-}
-
-/* === PARTIE BASSE === */
-
-#middle-part {
-    display:flex;
-    width: 100%;
-    height: fit-content;
-    background-color: rgb(255, 185, 224);
-}
 
 /* === FOOTER === */
 
 footer {
     background-color: #000000; 
-    display:flex;
+
     position:inherit;
     width: 100%; height: 160px;
+
     z-index: 3;
 }
 
-#icon-instagram {
+
+.icon-image {
     transition: all 0.3s;
 
     font-size: 35px;
-    width: 35px;
+    height: auto; 
+    width: auto; 
+    max-width: 35px; 
+    max-height: 35px;
     padding: 10px;
     cursor:pointer;
     border-radius: 15px;
@@ -171,25 +118,7 @@ footer {
     filter: invert(0%);
 }
 
-#icon-instagram:hover {
-    filter: invert(100%);
-}
-
-#icon-gmail {
-    transition: all 0.3s;
-
-    font-size: 35px;
-    width: 35px;
-    padding: 10px;
-    cursor:pointer;
-    border-radius: 15px;
-
-    background-color: black;
-
-    filter: invert(0%);
-}
-
-#icon-gmail:hover {
+.icon-image:hover {
     filter: invert(100%);
 }
 
@@ -249,4 +178,218 @@ footer {
     color: white;
     text-decoration: none;
 
+}
+
+/* ===================== */
+
+#page-content {
+    background-color: #000000; 
+    position:absolute;
+    top: 0px;
+    left: 0px;
+    
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+}
+
+#menu-spacer {
+    position: flex;
+    height: 50px;
+}
+
+/*
+==============================================================================================
+INDEX.HTML
+==============================================================================================
+*/
+
+/* === PARTIE SUPERIEUR === */
+
+#index-sup-part {
+    background-color: #BB5A46; 
+    display:flex;
+    width: 100%; 
+    height: 100%;
+}
+
+#index-div-cen-sup {
+    z-index: 5; 
+    position: absolute; 
+    top: 50%; 
+    max-width: 300px;  
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%); 
+    text-align: center; 
+    font-family: 'Roboto', sans-serif, monospace;
+}
+
+h1 {
+    color: white;
+}
+
+h3 {
+    color: rgb(207, 207, 207); 
+    font-weight: 300;
+    
+}
+
+#index-image-principale {
+    width: 120px; 
+    height: auto;
+}
+
+/* === PARTIE BASSE === */
+
+#index-middle-part {
+    display:flex;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(255, 185, 224);
+}
+
+/*
+==============================================================================================
+ANNONCES.HTML
+==============================================================================================
+*/
+
+#annonces-middle-part {
+    width: 100%;
+
+    padding: 100px 0px 100px 0px;
+    min-height: calc(100% - 320px);
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+/*
+==============================================================================================
+CONTACTER.HTML
+==============================================================================================
+*/
+
+#contacter-middle-part {
+    width: 100%;
+
+    padding: 100px 0px 100px 0px;
+    min-height: calc(100% - 410px);
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+#contacter-cdiv {
+    width: calc(100% - 40px);
+    height: auto;
+    position: relative;
+    left: 20px;
+}
+
+#contacter-mini-nav-menu {
+    background-color: rgb(255, 255, 255);
+    display: flex;    
+}
+
+#contacter-mini-nav-menu>div {
+    width: calc(100% / 3);
+    margin: 0px;
+    border: 1px solid black;
+    display:inline-flex;
+    height: fit-content;
+}
+
+#contacter-mini-nav-menu>div>label {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 10px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 15px;
+    text-align: center;
+    user-select:none;
+}
+
+.content-box {
+    display: none;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 15px;
+}
+
+#contacter-content-membres {
+    display: none;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 18px;
+}
+
+#contacter-content-box {
+    border: solid black;
+    border-width: 0px 1px 1px 1px;
+    overflow: hidden;
+    height: 200px;
+    transition: all 0.2s;
+    padding: 20px;
+}
+
+/*
+==============================================================================================
+AUTRE.HTML
+==============================================================================================
+*/
+
+#autre-middle-part {
+    width: 100%;
+
+    padding: 100px 0px 100px 0px;
+    min-height: calc(100% - 320px);
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*
+==============================================================================================
+PROGRAMME.HTML
+==============================================================================================
+*/
+
+#programme-middle-part {
+    width: 100%;
+
+    padding: 100px 0px 100px 0px;
+    min-height: calc(100% - 320px);
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/*
+==============================================================================================
+IUT.HTML
+==============================================================================================
+*/
+
+#iut-middle-part {
+    width: 100%;
+
+    padding: 100px 0px 100px 0px;
+    min-height: calc(100% - 410px);
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+#iut-text-part {
+    width: calc(100% - 120px);
+    left: 60px;
+    position: relative;
+
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 15px;
+
+    text-align: justify;
 }
