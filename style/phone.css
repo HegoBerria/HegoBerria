@@ -197,7 +197,7 @@ footer {
 /* ===================== */
 
 #page-content {
-    background-color: #ec2700; 
+    background-color: #000000;
     position:absolute;
     top: 0px;
     left: 0px;
@@ -277,8 +277,66 @@ ANNONCES.HTML
     display:flex;
     width: 100%;
     min-height: 100%;
-    height: 500px;
-    background-color: rgb(255, 185, 224);
+    background-color: rgb(255, 255, 255);
+    flex-wrap: wrap;
+
+    padding-top: 100px;
+}
+
+#annonces-middle-part > div {
+    display: block;
+    width: 90%;
+    margin: 50px 5% 50px 5%;
+    height: fit-content;
+
+    padding: 10px;
+
+    background-color: rgb(255, 255, 255);
+
+    border-radius: 15px;
+    border: solid black 2px;
+
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 35px;
+
+    text-align: justify;
+    padding: 30px;
+}
+
+h2 {
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 50px;
+
+    white-space: nowrap;
+    margin-left: 20px;
+}
+
+#annonces-box-header-info > h3 {
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif, monospace;
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    margin: 5px;
+    height: 40px;
+    white-space: nowrap;
+}
+
+#annonces-box-header {
+    display:block;
+    width: 100%;
+}
+
+#annonces-box-header-info {
+    margin: 0px 15px 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    direction: ltr;
 }
 
 /*
