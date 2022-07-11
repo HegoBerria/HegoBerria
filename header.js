@@ -31,7 +31,9 @@ function generateGr() {
 
                     var annonceContainer = document.createElement("div");
                     var annoncesBoxHeader = document.createElement("div");
+                    annoncesBoxHeader.setAttribute("id","annonces-box-header");
                     var annoncesBoxHeaderInfo = document.createElement("div");
+                    annoncesBoxHeaderInfo.idsetAttribute("id","annonces-box-header-info");
 
                     var paragraphe = document.createElement("p");
                     var titreAnnonce = document.createElement("h2");
@@ -52,8 +54,10 @@ function generateGr() {
                     }
 
                     currentDiv.appendChild(annonceContainer);
+                    
                 }
 
+                $( "#page-content" ).load(window.location.href + " #page-content" );
                 console.log(typeof obj, obj.count, obj["liste"][0])
             })
     }
