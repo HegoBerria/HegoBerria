@@ -304,6 +304,8 @@ ANNONCES.HTML
     display: block;
     padding-top: 10px;
 
+    margin-bottom: 10px;
+
     overflow: auto;
 }
 
@@ -311,6 +313,7 @@ ANNONCES.HTML
     display: block;
     width: 90%;
     margin-top: 10px;
+    margin-bottom: 10px;
     margin-left: 5%;
     height: fit-content;
 
@@ -459,7 +462,6 @@ CONTACTER.HTML
     margin: 30px 10px 10px 10px;
     border-width: 0px 1px 1px 1px;
     overflow: hidden;
-    height: 200px;
     transition: all 0.2s;
     padding: 20px;
     border-radius: 20px;
