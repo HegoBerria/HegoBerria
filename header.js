@@ -17,7 +17,7 @@ generateGr();
 function generateGr() {
 
     if (document.title === "Hego Berria | Annonces") {
-        fetch('./data/annonces.json')
+        /*fetch('./data/annonces.json')
             .then(response => response.text())
             .then((data) => {
                 const json = data;
@@ -31,7 +31,7 @@ function generateGr() {
 
                     var annonceContainer = document.createElement("div");
                     var annoncesBoxHeader = document.createElement("div");
-
+                        annonceContainer.style = "width: 100%; height: 200px; background-color: blue;"
                     var annoncesBoxHeaderInfo = document.createElement("div");
 
 
@@ -61,11 +61,18 @@ function generateGr() {
                 }
 
 
-            })
+            })*/
 
         
 
-        currentDiv.style = currentDiv.style;
+        const currentDiv = document.getElementById('annonces-middle-part');
+
+        console.log(typeof currentDiv)
+        
+        var annonceContainer = document.createElement("div");
+        annonceContainer.style = "width: 100%; height: 200px; background-color: blue;"
+
+        currentDiv.appendChild(annonceContainer);
     }
 
 }
