@@ -31,9 +31,9 @@ function generateGr() {
 
                     var annonceContainer = document.createElement("div");
                     var annoncesBoxHeader = document.createElement("div");
-                    annoncesBoxHeader.id = "annonces-box-header";
+                    
                     var annoncesBoxHeaderInfo = document.createElement("div");
-                    annoncesBoxHeaderInfo.id = "annonces-box-header-info";
+                    
 
                     var paragraphe = document.createElement("p");
                     var titreAnnonce = document.createElement("h2");
@@ -57,11 +57,13 @@ function generateGr() {
                     
                 }
 
+                annoncesBoxHeader.id = "annonces-box-header";
+                annoncesBoxHeaderInfo.id = "annonces-box-header-info";
+
                 var footerElement = document.getElementById('footer');
                 var containerElement = document.getElementById('page-content');
-                footerElement.style = footerElement.style;
-                containerElement.style = containerElement.style;
-                console.log(typeof obj, obj.count, obj["liste"][0])
+                footerElement.remove();
+                containerElement.appendChild(footerElement);
             })
     }
 }
