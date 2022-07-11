@@ -20,7 +20,9 @@ function generateGr() {
         fetch('./data/annonces.json')
         .then(response => response.text())
         .then((data) => {
-            console.log(typeof data,data["liste"])
+            const json = data;
+            const obj = JSON.parse(json);
+            console.log(typeof obj,obj.count,obj["liste"])
         })
     }
 }
