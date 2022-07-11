@@ -17,7 +17,7 @@ generateGr();
 function generateGr() {
 
     if (document.title === "Hego Berria | Annonces") {
-        /*fetch('./data/annonces.json')
+        fetch('./data/annonces.json')
             .then(response => response.text())
             .then((data) => {
                 const json = data;
@@ -61,18 +61,8 @@ function generateGr() {
                 }
 
 
-            })*/
+            })
 
-        
-
-        const currentDiv = document.getElementById('annonces-middle-part');
-
-        console.log(typeof currentDiv)
-        
-        var annonceContainer = document.createElement("div");
-        annonceContainer.style = "width: 100%; height: 200px; background-color: blue;"
-
-        currentDiv.appendChild(annonceContainer);
     }
 
 }
