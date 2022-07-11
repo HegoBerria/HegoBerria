@@ -63,11 +63,11 @@ function generateGr() {
 
             })
 
-        var footerElement = document.getElementById('footer');
-        var containerElement = document.getElementById('page-content');
-        footerElement.remove();
-        containerElement.appendChild(footerElement);
+        
+
+        currentDiv.style = currentDiv.style;
     }
+
 }
 
 function showMessage(message) {
