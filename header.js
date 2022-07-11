@@ -22,7 +22,7 @@ function generateGr() {
         .then((data) => {
             const json = data;
             const obj = JSON.parse(json);
-            console.log(typeof obj,obj.count,obj["liste"])
+            console.log(typeof obj,obj.count,obj["liste"][0])
         })
     }
 }
