@@ -31,9 +31,8 @@ function generateGr() {
 
                     var annonceContainer = document.createElement("div");
                     var annoncesBoxHeader = document.createElement("div");
-                        annonceContainer.style = "width: 100%; height: 200px; background-color: blue;"
+                      
                     var annoncesBoxHeaderInfo = document.createElement("div");
-
 
                     var paragraphe = document.createElement("p");
                     var titreAnnonce = document.createElement("h2");
@@ -114,15 +113,13 @@ function contacterMenuClick(id) {
 
     var hn = document.getElementById("contacter-content-box");
 
-    hn.style.backgroundColor = "black";
+    hn.style = "box-shadow: 1px 117px 0px 200px rgb(220,220,220) inset;";
     console.log(hn.style.maxHeight);
-
-
-
+    
     if (id === "contacter-bouton-membres-label" && ["white", ""].indexOf(labelMembres.style.backgroundColor) > -1) {
         labelContacter.style = "background-color: white; color: black;";
         labelTrouver.style = "background-color: white; color: black;";
-        clickedLabel.style = "background-color: #BB5A46; color: white;";
+        clickedLabel.style = "background-color: #BB5A46; color: white; transform: translateX(0px ) translateY(0px); box-shadow: 0px 0px rgb(71, 71, 71); border-color: #BB5A46";
 
 
         setTimeout(() => {
@@ -130,11 +127,11 @@ function contacterMenuClick(id) {
             contentTrouver.style.display = "none";
             contentMembres.style.display = "block";
 
-            hn.style.backgroundColor = "white";
+            hn.style = "box-shadow: 0px 0px 0px 0px rgb(220,220,220) inset;";
         }, 200);
 
     } else if (id === "contacter-bouton-contacter-label" && ["white", ""].indexOf(labelContacter.style.backgroundColor) > -1) {
-        clickedLabel.style = "background-color: #BB5A46; color: white;";
+        clickedLabel.style = "background-color: #BB5A46; color: white; transform: translateX(0px ) translateY(0px); box-shadow: 0px 0px rgb(71, 71, 71); border-color: #BB5A46";
         labelTrouver.style = "background-color: white; color: black;";
         labelMembres.style = "background-color: white; color: black;";
 
@@ -143,12 +140,12 @@ function contacterMenuClick(id) {
             contentTrouver.style.display = "none";
             contentMembres.style.display = "none";
 
-            hn.style.backgroundColor = "white";
+            hn.style = "box-shadow: 0px 0px 0px 0px rgb(220,220,220) inset;";
         }, 200);
 
     } else if (id === "contacter-bouton-trouver-label" && ["white", ""].indexOf(labelTrouver.style.backgroundColor) > -1) {
         labelContacter.style = "background-color: white; color: black;";
-        clickedLabel.style = "background-color: #BB5A46; color: white;";
+        clickedLabel.style = "background-color: #BB5A46; color: white; transform: translateX(0px ) translateY(0px); box-shadow: 0px 0px rgb(71, 71, 71); border-color: #BB5A46";
         labelMembres.style = "background-color: white; color: black;";
 
         setTimeout(() => {
@@ -156,7 +153,7 @@ function contacterMenuClick(id) {
             contentTrouver.style.display = "block";
             contentMembres.style.display = "none";
 
-            hn.style.backgroundColor = "white";
+            hn.style = "box-shadow: 0px 0px 0px 0px rgb(220,220,220) inset;";
         }, 200);
 
     } else {
@@ -169,7 +166,7 @@ function contacterMenuClick(id) {
             contentContacter.style.display = "none";
             contentTrouver.style.display = "none";
 
-            hn.style.backgroundColor = "white";
+            hn.style = "box-shadow: 0px 0px 0px 0px rgb(220,220,220) inset;";
         }, 200);
 
     }

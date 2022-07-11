@@ -281,6 +281,8 @@ ANNONCES.HTML
     flex-wrap: wrap;
 
     padding-top: 100px;
+
+    overflow: auto;
 }
 
 #annonces-middle-part > div {
