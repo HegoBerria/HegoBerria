@@ -31,9 +31,9 @@ function generateGr() {
 
                     var annonceContainer = document.createElement("div");
                     var annoncesBoxHeader = document.createElement("div");
-                    
+
                     var annoncesBoxHeaderInfo = document.createElement("div");
-                    
+
 
                     var paragraphe = document.createElement("p");
                     var titreAnnonce = document.createElement("h2");
@@ -47,6 +47,9 @@ function generateGr() {
                     annoncesBoxHeader.appendChild(titreAnnonce);
                     annoncesBoxHeader.appendChild(annoncesBoxHeaderInfo);
 
+                    annoncesBoxHeader.id = "annonces-box-header";
+                    annoncesBoxHeaderInfo.id = "annonces-box-header-info";
+
                     for (const informationText of annonceData["info"]) {
                         var information = document.createElement("h3");
                         information.innerText = informationText;
@@ -54,17 +57,16 @@ function generateGr() {
                     }
 
                     currentDiv.appendChild(annonceContainer);
-                    
+
                 }
 
-                annoncesBoxHeader.id = "annonces-box-header";
-                annoncesBoxHeaderInfo.id = "annonces-box-header-info";
 
-                var footerElement = document.getElementById('footer');
-                var containerElement = document.getElementById('page-content');
-                footerElement.remove();
-                containerElement.appendChild(footerElement);
             })
+
+        var footerElement = document.getElementById('footer');
+        var containerElement = document.getElementById('page-content');
+        footerElement.remove();
+        containerElement.appendChild(footerElement);
     }
 }
 
