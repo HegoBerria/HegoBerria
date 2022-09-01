@@ -456,10 +456,11 @@ IUT.HTML
 */
 
 #iut-middle-part {
+    
     width: 100%;
 
     padding: 100px 0px 100px 0px;
-    min-height: calc(100% - 410px);
+    min-height: calc(100% - 460px);
     height: auto;
     background-color: rgb(255, 255, 255);
 }
@@ -471,7 +472,29 @@ IUT.HTML
 
     font-weight: 300;
     font-family: 'Roboto', sans-serif, monospace;
-    font-size: 15px;
+    font-size: 20px;
 
     text-align: justify;
+}
+
+.snack-title {
+    background: black;
+    border-radius: 25px;
+    padding: 3px 20px 3px 20px;
+    font-size: 30px;
+}
+
+.snack-name-price {
+    padding: 5px 20px 5px 20px;
+    border-radius: 25px;
+}
+
+.snack-name-price:hover {
+    background: burlywood;
+    transition: all 0.2s;
+    
+}
+
+.snack-price {
+    float:right;
 }

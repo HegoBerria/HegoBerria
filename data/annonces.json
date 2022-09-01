@@ -1,14 +1,9 @@
 {
    "liste":[
       {
-         "titre":"Journée portes ouverte",
-         "info":["Lundi 22 Juin 2022", "Campus de Montaury"],
-         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mi eu risus malesuada, nec varius tellus congue. Quisque a aliquet mauris. Nullam ultrices tincidunt malesuada. Nulla ex justo, lobortis sit amet finibus vel, pretium quis elit. Duis gravida sapien ac leo porttitor, ac scelerisque elit fermentum. Fusce arcu ipsum, aliquet ut odio vitae, aliquet ultrices velit. Morbi tempor et urna sed commodo. Aenean tincidunt auctor nibh ac dictum."
-      },
-      {
-         "titre":"Tournoi sur Minecraft",
-         "info":["Vendredi 5 Février 2022"],
-         "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis mi eu risus malesuada, nec varius tellus congue. Quisque a aliquet mauris. Nullam ultrices tincidunt malesuada. Nulla ex justo, lobortis sit amet finibus vel, pretium quis elit. Duis gravida sapien ac leo porttitor, ac scelerisque elit fermentum. Fusce arcu ipsum, aliquet ut odio vitae, aliquet ultrices velit. Morbi tempor et urna sed commodo. Aenean tincidunt auctor nibh ac dictum."
+         "titre":"Rentrée 2022",
+         "info":["Jeudi 1 Septembre 2022"],
+         "description":"Bonne rentrée à tous, n'hésitez pas à venir nous voir si vous avez des questions."
       }
    ]
 }

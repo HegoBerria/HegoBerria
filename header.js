@@ -12,60 +12,6 @@ function verticalMenuClick() {
     }
 }
 
-generateGr();
-
-function generateGr() {
-
-    if (document.title === "Hego Berria | Annonces") {
-        fetch('./data/annonces.json')
-            .then(response => response.text())
-            .then((data) => {
-                const json = data;
-                const obj = JSON.parse(json);
-
-                for (const annonceData of obj["liste"]) {
-                    var currentDiv = document.getElementById('annonces-middle-part');
-
-                    var titre = annonceData["titre"];
-                    var description = annonceData["description"];
-
-                    var annonceContainer = document.createElement("div");
-                    var annoncesBoxHeader = document.createElement("div");
-                      
-                    var annoncesBoxHeaderInfo = document.createElement("div");
-
-                    var paragraphe = document.createElement("p");
-                    var titreAnnonce = document.createElement("h2");
-
-                    paragraphe.innerText = description;
-                    titreAnnonce.innerText = titre;
-
-                    annonceContainer.appendChild(annoncesBoxHeader);
-                    annonceContainer.appendChild(paragraphe);
-
-                    annoncesBoxHeader.appendChild(titreAnnonce);
-                    annoncesBoxHeader.appendChild(annoncesBoxHeaderInfo);
-
-                    annoncesBoxHeader.id = "annonces-box-header";
-                    annoncesBoxHeaderInfo.id = "annonces-box-header-info";
-
-                    for (const informationText of annonceData["info"]) {
-                        var information = document.createElement("h3");
-                        information.innerText = informationText;
-                        annoncesBoxHeaderInfo.appendChild(information);
-                    }
-
-                    currentDiv.appendChild(annonceContainer);
-
-                }
-
-
-            })
-
-    }
-
-}
-
 function showMessage(message) {
 
     var newDiv = document.createElement("div");
@@ -114,8 +60,7 @@ function contacterMenuClick(id) {
     var hn = document.getElementById("contacter-content-box");
 
     hn.style = "box-shadow: 1px 117px 0px 200px rgb(220,220,220) inset;";
-    console.log(hn.style.maxHeight);
-    
+
     if (id === "contacter-bouton-membres-label" && ["white", ""].indexOf(labelMembres.style.backgroundColor) > -1) {
         labelContacter.style = "background-color: white; color: black;";
         labelTrouver.style = "background-color: white; color: black;";
@@ -170,6 +115,77 @@ function contacterMenuClick(id) {
         }, 200);
 
     }
+}
 
+// CANVAS DECO
+
+
+
+var canvas = document.getElementById('background-anim');
+canvas.style = "z-index: 5;";
+var ctx = canvas.getContext('2d');
+
+var circleList = [];
+
+fitToContainer();
+
+window.addEventListener('resize', fitToContainer);
+
+function fitToContainer() {
+    canvas.style.width = '100%';
+    canvas.style.height = '100%';
+
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+}
+
+
+function getMousePos(evt) {
+    var rect = canvas.getBoundingClientRect();
+    return {
+        x: evt.clientX - rect.left,
+        y: evt.clientY - rect.top
+    };
+}
+
+function canvasClick(e) {
+
+    var pos = getMousePos(e);
+
+    circleList.push([pos.x, pos.y, 1]);
+
+    ctx.beginPath();
+    ctx.arc(pos.x, pos.y, 1, 0, 2 * Math.PI);
+    ctx.stroke();
 
 }
+
+let start, previousTimeStamp;
+let done = false
+
+function updateCirclePos(timestamp) {
+
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (var i = 0; i < circleList.length; i++) {
+
+        circleList[i][2] = circleList[i][2] + 1;
+
+        ctx.strokeStyle = "rgba(0, 0, 0, "+(1 - 0.01 * circleList[i][2]).toString()+")"; 
+        ctx.lineWidth=1;
+
+        ctx.beginPath();
+        ctx.arc(circleList[i][0], circleList[i][1], circleList[i][2], 0, 2 * Math.PI, false);
+        ctx.stroke();
+
+        if (circleList[i][2] > 100) {
+            circleList.splice(i, 1); 
+        }
+    }
+
+
+    window.requestAnimationFrame(updateCirclePos);
+
+}
+
+window.requestAnimationFrame(updateCirclePos);

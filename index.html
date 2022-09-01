@@ -24,19 +24,16 @@
 
 <body>
     <header>
-        <script src="header.js"></script>
 
         <div id="horizontal-menu">
             <div id="logo-left-part">
-                <a href="./programme.html" id="h-button-slider-programme" class="button-slider">Programme</a>
                 <a href="./annonces.html" id="h-button-slider-annonces" class="button-slider">Annonces</a>
                 <a href="./index.html" id="h-button-slider-accueil" class="button-slider-selected">Accueil</a>
             </div>
             <img id="logo-image-hor" src="logo/b&wINV.png" alt="logo du BDE">
             <div id="logo-right-part">
-                <a href="./autre.html" id="h-button-slider-autre" class="button-slider">Autre</a>
                 <a href="./contacter.html" id="h-button-slider-contacter" class="button-slider">Nous contacter</a>
-                <a href="./iut.html" id="h-button-slider-iut" class="button-slider">L'IUT</a>
+                <a href="./iut.html" id="h-button-slider-iut" class="button-slider">Snacks</a>
             </div>
         </div>
 
@@ -49,10 +46,8 @@
             <div id="vertical-menu-bar">
                 <a href="./index.html" id="v-button-slider-accueil" class="button-slider-selected">Accueil</a>
                 <a href="./annonces.html" id="v-button-slider-annonces" class="button-slider">Annonces</a>
-                <a href="./programme.html" id="v-button-slider-programme" class="button-slider">Programme</a>
-                <a href="./iut.html" id="v-button-slider-iut" class="button-slider">L'IUT</a>
+                <a href="./iut.html" id="v-button-slider-iut" class="button-slider">Snacks</a>
                 <a href="./contacter.html" id="v-button-slider-contacter" class="button-slider">Nous contacter</a>
-                <a href="./autre.html" id="v-button-slider-autre" class="button-slider">Autre</a>
                 <div id="vertical-menu-exitSp" onclick="verticalMenuClick()">
 
                 </div>
@@ -70,15 +65,15 @@
                 <h1>Hego Berria</h1>
                 <h3>Site du BDE du BUT d'informatique au campus Montaury d'anglet</h3>
                 <img id="index-image-principale" src="./logo/color.png" alt="logo du BDE">
+                
+    
             </div>
 
+            <canvas id="background-anim" width="300" height="100" onclick="canvasClick(event)">
+                Désolé, votre navigateur ne prend pas en charge &lt;canvas&gt;.
+              </canvas>
+            
         </div>
-        
-        <div id="index-middle-part">
-            Ici le corps de la page
-        </div>
-
-
 
         <footer id="footer">
             <div id="int-link-l">
@@ -110,19 +105,21 @@
             </div>
 
             <div id="ext-link">
-                <a class="icon" href="https://www.instagram.com/hegoberria/">
+                <a class="icon" href="https://www.instagram.com/hegoberria/" target="_blank">
                     <img alt="logo d'instagram" id="icon-instagram" class="icon-image" src="./logo/lien/logo-instagram-blanc.png">
                 </a>
-                <a class="icon" href="https://www.instagram.com/hegoberria/">
+                <a class="icon" href="https://discord.gg/umtErBrRb4" target="_blank">
                     <img alt="logo de discord" id="icon-gmail" class="icon-image" src="./logo/lien/discord.png">
                 </a>
-                <a class="icon" href="https://www.iutbayonne.univ-pau.fr/">
+                <a class="icon" href="https://www.iutbayonne.univ-pau.fr/" target="_blank">
                     <img alt="logo de l'iut de bayonne" id="icon-discord" class="icon-image" src="./logo/lien/iut.png">
                 </a>
             </div>
         </footer>
 
     </div>
+
+    <script src="header.js"></script>
 </body>
 
 </html>
