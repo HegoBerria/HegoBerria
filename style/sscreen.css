@@ -490,7 +490,7 @@ IUT.HTML
 }
 
 .snack-name-price:hover {
-    background: burlywood;
+    background: rgba(222, 184, 135, 0.26);
     transition: all 0.2s;
     
 }

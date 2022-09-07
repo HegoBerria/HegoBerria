@@ -1,3 +1,57 @@
+generateGr();
+
+function generateGr() {
+
+    if (document.title === "Hego Berria | Annonces") {
+        fetch('./data/annonces.json')
+            .then(response => response.text())
+            .then((data) => {
+                const json = data;
+                const obj = JSON.parse(json);
+
+                for (const annonceData of obj["liste"]) {
+                    var currentDiv = document.getElementById('annonces-middle-part');
+
+                    var titre = annonceData["titre"];
+                    var description = annonceData["description"];
+
+                    var annonceContainer = document.createElement("div");
+                    var annoncesBoxHeader = document.createElement("div");
+                      
+                    var annoncesBoxHeaderInfo = document.createElement("div");
+
+                    var paragraphe = document.createElement("p");
+                    var titreAnnonce = document.createElement("h2");
+
+                    paragraphe.innerText = description;
+                    titreAnnonce.innerText = titre;
+
+                    annonceContainer.appendChild(annoncesBoxHeader);
+                    annonceContainer.appendChild(paragraphe);
+
+                    annoncesBoxHeader.appendChild(titreAnnonce);
+                    annoncesBoxHeader.appendChild(annoncesBoxHeaderInfo);
+
+                    annoncesBoxHeader.id = "annonces-box-header";
+                    annoncesBoxHeaderInfo.id = "annonces-box-header-info";
+
+                    for (const informationText of annonceData["info"]) {
+                        var information = document.createElement("h3");
+                        information.innerText = informationText;
+                        annoncesBoxHeaderInfo.appendChild(information);
+                    }
+
+                    currentDiv.appendChild(annonceContainer);
+
+                }
+
+
+            })
+
+    }
+
+}
+
 function verticalMenuClick() {
     var verticalBar = document.getElementById("vertical-menu-bar");
     var horMenu = document.getElementById("vertical-menu");
